@@ -39,18 +39,18 @@ on:
           - 'Default'
       Tempoary_IP:
         description: '固件 IP 地址 [可选]'
-        default: ''
+        default: '192.168.100.1'
       UPLOAD_RELEASES:
         description: '上传固件到 Releases'
-        default: 'true'
+        default: true
         type: boolean
       UPLOAD_ARTIFACTS:
         description: '上传固件到 Artifacts'
-        default: 'false'
+        default: false
         type: boolean
       UPLOAD_BIN_ARTIFACTS:
         description: '上传 bin 文件夹到 Artifacts'
-        default: 'false'
+        default: false
         type: boolean
 
 ### 环境变量设置
@@ -62,9 +62,9 @@ env:
 # 删除无用文件以增加编译空间
   DELETE_USELESS_FILES: true
 # 删除早期的 workflow 任务
-  DELETE_OLD_WORKFLOW: false
+  DELETE_OLD_WORKFLOW: true
 # Cache 加速编译
-  CACHE_ACCELERATE: false
+  CACHE_ACCELERATE: true
 ### 结束
 
 jobs:
